@@ -1,0 +1,26 @@
+Server:
+  port: 8087
+
+spring:
+  application:
+    name: ms-producto-negocio
+  datasource:
+    url: jdbc:postgresql://localhost:5432/BD_PRODUCTO
+    username: postgres
+    password: admin
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    proppierties: 
+      hibernate:
+        default_schema: sys
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info
+
+
