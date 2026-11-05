@@ -2,6 +2,8 @@ package com.csi.ms_producto_negocio.model;
 
 import java.math.BigDecimal;
 
+import com.csi.ms_producto_negocio.exception.StockInsuficienteException;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -141,7 +143,7 @@ public class Producto {
 
 	public void disminuirStock(int cantidad) {
 		if (cantidad > stockActual) {
-			//throw new StockInsuficienteException(codigo, stockActual, cantidad);
+			throw new StockInsuficienteException(codigo, stockActual, cantidad);
 		}
 		this.stockActual -= cantidad;
 		
