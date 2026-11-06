@@ -37,7 +37,7 @@ public class Producto {
 	private int stockActual;
 
 	@Column(nullable = false, name = "stock_minimo")
-	private int strockMinimo;
+	private int stockMinimo;
 
 	@Column(nullable = false)
 	private boolean activo = true;
@@ -53,7 +53,7 @@ public class Producto {
 		this.nombre = nombre;
 		this.descripcion = descripcion;
 		this.precio = precio;
-		this.strockMinimo = stockMinimo;
+		this.stockMinimo = stockMinimo;
 	}
 	
 	public Producto(String codigo, String nombre, String descripcion, BigDecimal precio, int strockMinimo) {
@@ -112,12 +112,12 @@ public class Producto {
 		this.stockActual = stockActual;
 	}
 
-	public int getStrockMinimo() {
-		return strockMinimo;
+	public int getStockMinimo() {
+		return stockMinimo;
 	}
 
-	public void setStrockMinimo(int strockMinimo) {
-		this.strockMinimo = strockMinimo;
+	public void setStockMinimo(int strockMinimo) {
+		this.stockMinimo = strockMinimo;
 	}
 
 	public boolean isActivo() {
@@ -151,7 +151,7 @@ public class Producto {
 
 	public boolean tieneStockBajo() {
 		// TODO Auto-generated method stub
-		return stockActual <= strockMinimo;
+		return stockActual <= stockMinimo;
 	}
 
 	public void desactivar() {

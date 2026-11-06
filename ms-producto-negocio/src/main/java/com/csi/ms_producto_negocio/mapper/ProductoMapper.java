@@ -16,11 +16,11 @@ public class ProductoMapper {
 
 	public ProductoResponse toResponse(Producto p) {
 		return new ProductoResponse(p.getId(), p.getCodigo(), p.getNombre(), p.getDescripcion(), p.getPrecio(),
-				p.getStockActual(), p.getStrockMinimo(), p.tieneStockBajo(), p.isActivo());
+				p.getStockActual(), p.getStockMinimo(), p.tieneStockBajo(), p.isActivo());
 	}
 
 	public StockResponse toStockResponse(Producto p) {
-		return new StockResponse(p.getId(), p.getCodigo(), p.getNombre(), p.getStockActual(), p.getStrockMinimo(),
+		return new StockResponse(p.getId(), p.getCodigo(), p.getNombre(), p.getStockActual(), p.getStockMinimo(),
 				p.tieneStockBajo());
 	}
 }
