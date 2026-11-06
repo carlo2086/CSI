@@ -18,9 +18,4 @@ public interface ProductoRepository extends JpaRepository<Producto, Long> {
 	@Query("select p from Producto p where p.activo = true and p.stockActual <= p.stockMinimo order by p.stockActual")
 	List<Producto> findConStockBajo();
 	
-	Producto saveProducto(Producto p);
-	
-	Producto updateProducto(Producto p);
-	
-	Producto deleteProducto(Long id);
 }

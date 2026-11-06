@@ -149,4 +149,14 @@ public class Producto {
 		
 	}
 
+	public boolean tieneStockBajo() {
+		// TODO Auto-generated method stub
+		return stockActual <= strockMinimo;
+	}
+
+	public void desactivar() {
+		// TODO Auto-generated method stub
+		this.activo = false;
+	}
+
 }
