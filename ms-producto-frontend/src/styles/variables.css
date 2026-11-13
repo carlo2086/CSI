@@ -1,0 +1,9 @@
+:root {
+  --color-primario: #2563eb;
+  --color-peligro: #dc2626;
+  --color-exito: #16a34a;
+  --color-fondo: #f8fafc;
+  --color-texto: #0f172a;
+  --radio: 8px;
+  --espacio: 1rem;
+}
